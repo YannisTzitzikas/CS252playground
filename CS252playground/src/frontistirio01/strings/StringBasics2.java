@@ -1,3 +1,6 @@
+package frontistirio01.strings;
+
+
 public class StringBasics2 {
 
 	/**

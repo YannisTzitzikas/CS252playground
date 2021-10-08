@@ -1,3 +1,6 @@
+package frontistirio01.strings;
+
+
 // p.56-57 from F02_Strings_Fall18.pdf
 public String function(String my_string)
 {

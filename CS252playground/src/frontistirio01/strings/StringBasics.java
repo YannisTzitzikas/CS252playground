@@ -1,3 +1,5 @@
+package frontistirio01.strings;
+
 import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
 

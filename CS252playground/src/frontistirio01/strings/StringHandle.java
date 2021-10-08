@@ -1,3 +1,6 @@
+package frontistirio01.strings;
+
+
 import java.lang.*;
 
 class Indexofstr{

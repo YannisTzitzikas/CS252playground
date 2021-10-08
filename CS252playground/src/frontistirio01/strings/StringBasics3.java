@@ -1,3 +1,5 @@
+package frontistirio01.strings;
+
 
 public class StringBasics3 {
 
@@ -60,7 +62,7 @@ public class StringBasics3 {
 		/*
 		String s16 = "Hello boys and girls";
 		String s17 = "13-43242-232";
-		StringTokenizer st1 = new StringTokenizer(s16); // constructor 1, uses a default delimiter of “ \n\t\r”
+		StringTokenizer st1 = new StringTokenizer(s16); // constructor 1, uses a default delimiter of ï¿½ \n\t\rï¿½
 		StringTokenizer st2 = new StringTokenizer(s17, "-"); // constructor 2
 		
 		while(st1.hasMoreTokens())

@@ -1,3 +1,5 @@
+package frontistirio01.basic_examples;
+
 public class ForLoopExample {
 
     public static void forMethod(int num) {

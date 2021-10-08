@@ -1,3 +1,4 @@
+package frontistirio01.basic_examples;
 import java.util.Random;
 
 public class ImportExample {

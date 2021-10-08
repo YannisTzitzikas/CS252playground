@@ -1,3 +1,5 @@
+package frontistirio01.basic_examples;
+
 public class HelloWorldExample {
 
     public static void main(String args[]) {

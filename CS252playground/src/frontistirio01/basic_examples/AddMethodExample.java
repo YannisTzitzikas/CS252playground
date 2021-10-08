@@ -1,6 +1,8 @@
+package frontistirio01.basic_examples;
+
 public class AddMethodExample {
 
-    public double add(double a, double b) {
+    static public double add(double a, double b) {
         return a + b;
     }
 

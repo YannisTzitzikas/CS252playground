@@ -30,6 +30,8 @@ class TestConstructors {
 	public static void main(String[] lala) {   	
 		Aclass a = new Aclass();
 		Bclass b = new Bclass();
+		
+		/*
 		System.out.println(a.name);
 		System.out.println(a.toString());
 		System.out.println(b.name);
@@ -52,7 +54,7 @@ class TestConstructors {
 		tc = tb ;
 		Bclass td;
 		td = (Bclass)tc ; // the variable tc points to an object inst of Bclass
-		
+		*/
 		
 		
 		

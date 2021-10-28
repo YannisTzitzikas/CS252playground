@@ -1,9 +1,9 @@
-package csd.uoc.gr.FurnitureShopExample;
+package frontistirio04.FurnitureShopExample;
 
-import csd.uoc.gr.PeopleKinds.Customer;
-import csd.uoc.gr.PeopleKinds.Employee;
-import csd.uoc.gr.Stuff.Manager;
-import csd.uoc.gr.Stuff.SalesPerson;
+import frontistirio04.PeopleKinds.Customer;
+import frontistirio04.PeopleKinds.Employee;
+import frontistirio04.Stuff.Manager;
+import frontistirio04.Stuff.SalesPerson;
 
 public final class FurnitureShop{
 
@@ -28,18 +28,18 @@ public final class FurnitureShop{
         System.out.println("\n" + giannis.toString());
 
         /*
-         * Αρχικοποιούμε έναν array με τους 3 υπαλλήλους. Αυτό είναι εφικτό εφόσον οι κλάσεις που
-         * ανήκουν τα αντικείμενα που είναι οι Manager, SalesPerson έχουν κληρονομήσει την κλάση
-         * Employee. Άρα και ένας Manager και ένας SalesPerson είναι Employees
+         * Î‘Ï�Ï‡Î¹ÎºÎ¿Ï€Î¿Î¹Î¿Ï�Î¼Îµ Î­Î½Î±Î½ array Î¼Îµ Ï„Î¿Ï…Ï‚ 3 Ï…Ï€Î±Î»Î»Î®Î»Î¿Ï…Ï‚. Î‘Ï…Ï„ÏŒ ÎµÎ¯Î½Î±Î¹ ÎµÏ†Î¹ÎºÏ„ÏŒ ÎµÏ†ÏŒÏƒÎ¿Î½ Î¿Î¹ ÎºÎ»Î¬ÏƒÎµÎ¹Ï‚ Ï€Î¿Ï…
+         * Î±Î½Î®ÎºÎ¿Ï…Î½ Ï„Î± Î±Î½Ï„Î¹ÎºÎµÎ¯Î¼ÎµÎ½Î± Ï€Î¿Ï… ÎµÎ¯Î½Î±Î¹ Î¿Î¹ Manager, SalesPerson Î­Ï‡Î¿Ï…Î½ ÎºÎ»Î·Ï�Î¿Î½Î¿Î¼Î®ÏƒÎµÎ¹ Ï„Î·Î½ ÎºÎ»Î¬ÏƒÎ·
+         * Employee. Î†Ï�Î± ÎºÎ±Î¹ Î­Î½Î±Ï‚ Manager ÎºÎ±Î¹ Î­Î½Î±Ï‚ SalesPerson ÎµÎ¯Î½Î±Î¹ Employees
          */
         Employee[] employees = {nikos, kostas, giannis};
         double totalGrossSalaries = 0;
         /*
-         * H παρακάτω for loop είναι πολυμορφική διότι μόνο με μια γραμμή κώδικα καλούμε
-         * κατά την εκτέλεση του προγράμματος διαφορετικά κομμάτια κώδικα αναλόγως τον τύπου του
-         * αντικειμένου. Αφού επιβάλλαμε στις κλάσεις Manager, SalesPerson να υλοποιήσουν την συνάρτηση
-         * getGrossSalary() δηλώνοντάς τη ως abstract στην κλάση Employee, ξέρουμε πως κάθε αντικείμενο
-         * Manager ή SalesPerson θα έχει τη δική του υλοποίηση για αυτή τη συνάρτηση αφού κληρονομεί την Employee
+         * H Ï€Î±Ï�Î±ÎºÎ¬Ï„Ï‰ for loop ÎµÎ¯Î½Î±Î¹ Ï€Î¿Î»Ï…Î¼Î¿Ï�Ï†Î¹ÎºÎ® Î´Î¹ÏŒÏ„Î¹ Î¼ÏŒÎ½Î¿ Î¼Îµ Î¼Î¹Î± Î³Ï�Î±Î¼Î¼Î® ÎºÏŽÎ´Î¹ÎºÎ± ÎºÎ±Î»Î¿Ï�Î¼Îµ
+         * ÎºÎ±Ï„Î¬ Ï„Î·Î½ ÎµÎºÏ„Î­Î»ÎµÏƒÎ· Ï„Î¿Ï… Ï€Ï�Î¿Î³Ï�Î¬Î¼Î¼Î±Ï„Î¿Ï‚ Î´Î¹Î±Ï†Î¿Ï�ÎµÏ„Î¹ÎºÎ¬ ÎºÎ¿Î¼Î¼Î¬Ï„Î¹Î± ÎºÏŽÎ´Î¹ÎºÎ± Î±Î½Î±Î»ÏŒÎ³Ï‰Ï‚ Ï„Î¿Î½ Ï„Ï�Ï€Î¿Ï… Ï„Î¿Ï…
+         * Î±Î½Ï„Î¹ÎºÎµÎ¹Î¼Î­Î½Î¿Ï…. Î‘Ï†Î¿Ï� ÎµÏ€Î¹Î²Î¬Î»Î»Î±Î¼Îµ ÏƒÏ„Î¹Ï‚ ÎºÎ»Î¬ÏƒÎµÎ¹Ï‚ Manager, SalesPerson Î½Î± Ï…Î»Î¿Ï€Î¿Î¹Î®ÏƒÎ¿Ï…Î½ Ï„Î·Î½ ÏƒÏ…Î½Î¬Ï�Ï„Î·ÏƒÎ·
+         * getGrossSalary() Î´Î·Î»ÏŽÎ½Î¿Î½Ï„Î¬Ï‚ Ï„Î· Ï‰Ï‚ abstract ÏƒÏ„Î·Î½ ÎºÎ»Î¬ÏƒÎ· Employee, Î¾Î­Ï�Î¿Ï…Î¼Îµ Ï€Ï‰Ï‚ ÎºÎ¬Î¸Îµ Î±Î½Ï„Î¹ÎºÎµÎ¯Î¼ÎµÎ½Î¿
+         * Manager Î® SalesPerson Î¸Î± Î­Ï‡ÎµÎ¹ Ï„Î· Î´Î¹ÎºÎ® Ï„Î¿Ï… Ï…Î»Î¿Ï€Î¿Î¯Î·ÏƒÎ· Î³Î¹Î± Î±Ï…Ï„Î® Ï„Î· ÏƒÏ…Î½Î¬Ï�Ï„Î·ÏƒÎ· Î±Ï†Î¿Ï� ÎºÎ»Î·Ï�Î¿Î½Î¿Î¼ÎµÎ¯ Ï„Î·Î½ Employee
          * */
         System.out.println("\nCalculating Gross Salary for Employees:");
         for(int i=0; i < employees.length; i++){

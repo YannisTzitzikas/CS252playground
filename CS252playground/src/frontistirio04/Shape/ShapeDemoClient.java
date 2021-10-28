@@ -1,4 +1,4 @@
-package csd.uoc.gr.Shape;
+package frontistirio04.Shape;
 
 public class ShapeDemoClient {
 	public static void main(String argv[ ]) {

@@ -1,4 +1,4 @@
-package csd.uoc.gr.Human;
+package frontistirio04.Human;
 
 public class Human {
 	String name = "HumanName";

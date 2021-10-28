@@ -1,4 +1,4 @@
-package csd.uoc.gr.Shape;
+package frontistirio04.Shape;
 
 public class ShapePair extends Shape {
 	private Shape shape1,shape2;

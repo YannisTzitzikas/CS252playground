@@ -1,4 +1,4 @@
-package csd.uoc.gr.PeopleKinds;
+package frontistirio04.PeopleKinds;
 
 public class Customer extends PeopleInFs {
 

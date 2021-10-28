@@ -1,4 +1,4 @@
-package csd.uoc.gr.Shape;
+package frontistirio04.Shape;
 
 public class Rectangle extends Shape {
 	int width, length;

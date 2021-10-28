@@ -1,4 +1,4 @@
-package csd.uoc.gr.BankAccount;
+package frontistirio04.BankAccount;
 
 import java.util.Scanner;
 

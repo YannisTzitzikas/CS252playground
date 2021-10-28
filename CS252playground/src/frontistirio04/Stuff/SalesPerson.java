@@ -1,6 +1,6 @@
-package csd.uoc.gr.Stuff;
+package frontistirio04.Stuff;
 
-import csd.uoc.gr.PeopleKinds.Employee;
+import frontistirio04.PeopleKinds.Employee;
 
 public class SalesPerson extends Employee {
 

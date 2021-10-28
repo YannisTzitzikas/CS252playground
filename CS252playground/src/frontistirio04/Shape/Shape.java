@@ -1,4 +1,4 @@
-package csd.uoc.gr.Shape;
+package frontistirio04.Shape;
 
 public abstract class Shape implements Cloneable {
 	private String ShapeName;

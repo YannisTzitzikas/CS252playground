@@ -1,4 +1,4 @@
-package csd.uoc.gr.Human;
+package frontistirio04.Human;
 
 public class HumanExample {
 	public static void main(String args[]){

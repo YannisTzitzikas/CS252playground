@@ -1,4 +1,4 @@
-package csd.uoc.gr.BankAccount;
+package frontistirio04.BankAccount;
 
 public class MaxBalanceProcessorRunner {
 	public static void main(String[] args)

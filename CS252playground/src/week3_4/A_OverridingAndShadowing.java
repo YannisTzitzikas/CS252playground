@@ -1,7 +1,7 @@
 /**
  * 
  */
-package week3;
+package week3_4;
 
 class Ugrad { 
 	int DM = 140;  int perYear() { return DM/4; }

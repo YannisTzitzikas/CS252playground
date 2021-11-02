@@ -1,17 +1,16 @@
-package week3;
+package week3_4;
 
-
-// super
-
+// super class
 class AA {
 	AA() { System.out.println("an instance of A is created");}
+	AA(int a) { System.out.println(a);}
 	AA(Boolean b) { 
 		if (b==true) {
 			System.out.println("TRUE");
 		}
 	}
 }
-
+// subclass
 class BP extends AA {
 	void AA() { }
 	BP() { super(true); System.out.println("MPAM"); }
@@ -21,7 +20,6 @@ class BP extends AA {
 class Tester {
 	public static void main(String[] args){
 		BP b1 = new BP(7);
-		
 	}
 }
 

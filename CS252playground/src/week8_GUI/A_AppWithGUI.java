@@ -83,7 +83,6 @@ class A_AppWithGUI {
 		AActivity a2 = new AActivity("win2");
 		
 		SuperActivity s1 = new SuperActivity("HERE I AM");
-
 	}
 
 }

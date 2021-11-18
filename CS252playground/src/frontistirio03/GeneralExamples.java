@@ -1,4 +1,4 @@
-package fontistirio03;
+package frontistirio03;
 
 import java.io.*;
 import java.util.Random;

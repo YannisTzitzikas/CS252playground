@@ -8,5 +8,9 @@ package frontistirio0608Grafika;
  *
  */
 public class todelete {
+	
+	public static void main (String [] args) {
+		
+	}
 
 }

@@ -1,19 +1,32 @@
 package week9;
 import java.util.*;
 
+/**
+ * Various examples about sorting
+ * @author Yannis Tzitzikas (yannistzitzik@gmail.com)
+ *
+ */
 
-class Student7 implements Comparable {
+
+/**
+ * defining the natural ordering of the instances of MyStudent
+ * @author Yannis Tzitzikas (yannistzitzik@gmail.com)
+ *
+ */
+class MyStudent implements Comparable {
 	int AM;
 
 	@Override
 	public int compareTo(Object o) {
-		Student7 s2= (Student7) o;
+		MyStudent s2= (MyStudent) o;
 		return this.AM - s2.AM;
 	}
 	public String toString() { return " " + AM; }
-	Student7(int am) {AM=am;}
+	MyStudent(int am) {AM=am;}
 }
-class GradStudent extends Student7 { 
+
+// overriding the natural ordering
+class GradStudent extends MyStudent { 
 	
 	@Override
 	public int compareTo(Object o) {
@@ -24,13 +37,14 @@ class GradStudent extends Student7 {
 	GradStudent(int am){super(am);}
 }
 
+// Sygkritis
 class katataswTaPanta implements Comparator {
 	public int compare(Object a, Object b) {
         //return 0;
 		
-		if ((a instanceof Student7) && (b instanceof Student7)) {
-			Student7 sa= (Student7) a;
-	        Student7 sb= (Student7) b;
+		if ((a instanceof MyStudent) && (b instanceof MyStudent)) {
+			MyStudent sa= (MyStudent) a;
+	        MyStudent sb= (MyStudent) b;
 	        
 	        return sa.AM - sb.AM;
 		}
@@ -80,7 +94,8 @@ class SortExamplesTester {
 		list.add(-3);
 		list.add(0);
 		
-		System.out.println(list);
+		System.out.println("Original list:\n" + list);
+		//System.out.println(list);
 		
 		
 		// Sorting using the utility function
@@ -97,7 +112,7 @@ class SortExamplesTester {
 		SortExamples.mySort(list, new myComp());
 		System.out.println("Using my method and my custom comparator:\n" + list);
 		
-		Student7 s1 = new Student7(4000);
+		MyStudent s1 = new MyStudent(4000);
 		GradStudent s2 = new GradStudent(5000);
 		GradStudent s3 = new GradStudent(6000);
 		

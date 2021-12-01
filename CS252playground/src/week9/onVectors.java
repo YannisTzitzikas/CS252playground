@@ -2,7 +2,11 @@ package week9;
 import java.util.Vector;
 import java.util.Iterator;
 
-
+/**
+ * A few basic examples of using Vectors 
+ * @author Yannis Tzitzikas (yannistzitzik@gmail.com)
+ *
+ */
 class Person {
 	  static private int count =0;
 	  String name;
@@ -41,7 +45,8 @@ class Tester {
 		for (Object o: v) {
 			System.out.println("->" + o);
 		}
-				
+
+		
 
 		// Example of Iterators
 		System.out.println("Example of Using an Iterator");
@@ -49,7 +54,7 @@ class Tester {
 		   System.out.println(i.next());
 		
 		
-		
+		/*
 		
 		
 		// GENERICS
@@ -68,7 +73,7 @@ class Tester {
 		for (Person o: vg) {
 			System.out.println("->" + o);
 		}
-		
+		*/
 		/*
 		// Example of Iterators
 		System.out.println("Example of Using an Iterator");

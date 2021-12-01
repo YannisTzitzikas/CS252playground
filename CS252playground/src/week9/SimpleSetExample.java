@@ -7,6 +7,12 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
+/**
+ * Basic examples related to Sets
+ * @author Yannis Tzitzikas (yannistzitzik@gmail.com)
+ *
+ */
+
  class TestCollection {
 	public static void main(String args[]) {
    // Create an empty set 

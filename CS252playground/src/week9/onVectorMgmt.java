@@ -2,12 +2,13 @@ package week9;
 import java.util.Vector;
 import java.util.Iterator;
 
-
-
-
+/**
+ * Vectors: Understanding size-related issues (capacity)
+ * @author Yannis Tzitzikas (yannistzitzik@gmail.com)
+ *
+ */
 class vectest {
 	public static void main (String[] arg){
-		
 		Vector v = new Vector();
 		v.addElement("Ena");
 		v.addElement(2); 
@@ -17,8 +18,7 @@ class vectest {
 		System.out.println(v);
 		System.out.println("size: " + v.size() + " capacity: "+ v.capacity());
 		
-		
-				
+	
 		// Example of overwritting 
 		v.setElementAt("X", 1); // Overwrites the reference to "Dyo"
 		System.out.println(v);
@@ -29,11 +29,12 @@ class vectest {
 		System.out.println(v);   ///[ "Ena", "X", "DyoInd" "Tria", "Tessera"
 		System.out.println("size: " + v.size());
 		
-	    		
+		
 		// Example of size change:  we reduce size and we loose references
 		v.setSize(2);  // 
 		System.out.println(v);
-		System.out.println(v.capacity());
+		System.out.println("size="+v.size() + " capacity="+ v.capacity());
+		
 		
 		//	 Example of size change:  we increase size and have null refererences
 		v.setSize(12);  // 
@@ -43,34 +44,25 @@ class vectest {
 		System.out.println("size="+v.size() + " capacity="+v.capacity());
 		
 		
-		
-		
 		///
 		// Example of the automatic doubling the capacity of a vector
 		v.setSize(22);  // 
 		System.out.println(v);
 		System.out.println("size="+v.size() + " capacity="+v.capacity());
-		
-		
-		
+				
 		// Example of the capacity shrink
 		v.trimToSize();
 		System.out.println(v);
 		System.out.println("size="+v.size() + " capacity="+v.capacity());
 
 		
-		
-		
 		// Add/remove
 		v.addElement("AAA");
 		v.removeElement("AAA");
+		
 		System.out.println(v);
 		System.out.println("size="+v.size() + " capacity="+v.capacity());
-	
-		
-		
-		
-		
+	    
 		// Svhnei ola ta nulls		
 		System.out.println("Deleting Nulls");
 		int i=0;
@@ -84,10 +76,7 @@ class vectest {
 		System.out.println("size="+v.size() + " capacity="+v.capacity());
 		//System.exit(1);
 		
-		
-		
-		
-		
+		/*
 		// Svhnei ola ta nulls			
 		while (v.contains(null)) {
 			v.removeElement(null);
@@ -96,7 +85,7 @@ class vectest {
 		System.out.println("size="+v.size() + " capacity="+v.capacity());
 		
 		System.exit(1);
-		
+		*/
 	}
 	
 }

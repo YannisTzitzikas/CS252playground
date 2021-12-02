@@ -28,11 +28,14 @@ class MyStudent implements Comparable {
 // overriding the natural ordering
 class GradStudent extends MyStudent { 
 	
+	
 	@Override
 	public int compareTo(Object o) {
+		// if (o instanceof GradStudent)..
 		GradStudent s2= (GradStudent) o;
 		return this.AM - s2.AM;
 	}
+	
 	
 	GradStudent(int am){super(am);}
 }
@@ -103,10 +106,11 @@ class SortExamplesTester {
 		System.out.println("Using the sort:\n" + list);
 		
 		
+		
 		Collections.sort(list, new myComp());
 		System.out.println("Using the sort and my comparator:\n" + list);
 		
-		
+		//System.exit(1);
 			
 		// Sorting using a custom method 
 		SortExamples.mySort(list, new myComp());
@@ -120,7 +124,7 @@ class SortExamplesTester {
 		bag.add(s3);
 		bag.add(s2);
 		bag.add(s1);
-		bag.add(7);
+		//bag.add(7);
 		
 		
 		//bag.add(4.1);
@@ -135,7 +139,7 @@ class SortExamplesTester {
 		
 		//Collection ss = new TreeSet(bag);
 		Collection ss = new TreeSet(new katataswTaPanta());
-		ss.addAll(bag);
+		//ss.addAll(bag);
 		
 		System.out.println(ss);
 		

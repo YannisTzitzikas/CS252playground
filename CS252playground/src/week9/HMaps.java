@@ -12,22 +12,23 @@ class HMapTests {
 		fc.put("maria","aspro"); //   x, f(x)
 		fc.put("maria","prasino");
 		fc.put("manouso","prasino");
-		fc.put("nikos","mple");
 		fc.put("violeti","violeti");
 		fc.put("violeti","asxeto");
-				
+		//fc.put( 4040,"Παπαδάκης");
+		//fc.put( 4040,"Παπαδακάκης");
 		System.out.println(fc);
 		
 		Map fc2 = new HashMap();
 		fc2.put("Τρίτη", "Μάθημα");
 		fc2.put("violeti", "252");
+		System.out.println(fc2);
 		
-			
+	
 		fc.putAll(fc2); // union (with overwritting the existing keys if they exist)
-		
 		System.out.println(fc);
 		
-		Object o = fc.remove("kot");
+			
+		Object o = fc.remove("kot"); // δεν υπάρχει τέτοιο κλειδί
 		System.out.println(fc);
 		System.out.println(o);
 		
@@ -44,7 +45,9 @@ class HMapTests {
 		System.out.println("Printing entrySet()");
 		System.out.println(fc.entrySet());
 		
+		/*
 		System.exit(2);
+		*/
 		/*
 		Map favoriteColors = new HashMap();
 		//Map<String,Color> favoriteColors = n
@@ -63,7 +66,6 @@ class HMapTests {
 		System.out.println("\n" +favoriteColors);
 		
 		
-		
 		System.out.println("===>>>" +
 				Arrays.toString(((Object [])favoriteColors.get("Σάββας"))));
 		
@@ -71,7 +73,6 @@ class HMapTests {
 		//Changing an existing association 
 		favoriteColors.put("Juliet",Color.red);
 		System.out.println("\n" + favoriteColors);
-		
 		
 		//Getting the value associated with a key 
 		Color julietsFavoriteColor = (Color) favoriteColors.get("Juliet"); 
@@ -89,7 +90,6 @@ class HMapTests {
 		Set keySet = favoriteColors.keySet(); //get the set of keys
 		//Set valueSet = favoriteColors.values(); 
 	
-		
 		// iterate through the set of keys 
 		Iterator iter = keySet.iterator(); 
 		while (iter.hasNext()) { 
@@ -97,13 +97,6 @@ class HMapTests {
 			Object value = favoriteColors.get(key);     
 			System.out.println(key + "->" + value); 
 		}; 
-		
-	
-		
-			
-		
-		
-		
 		
 		
 		for (Object c: favoriteColors.keySet())

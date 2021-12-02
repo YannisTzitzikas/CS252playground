@@ -33,7 +33,7 @@ class Mysterious {
     	    String z = (String)tmp.last();
     	    System.out.println(z + " " + map.get(z));
     	// optional
-    	    System.out.println(map);
+    	   // System.out.println(map);
 	} catch ( IOException e ) {
 		System.err.println(e.getMessage() );
 		System.exit( 1 );

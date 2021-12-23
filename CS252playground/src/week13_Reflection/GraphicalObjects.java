@@ -159,6 +159,7 @@ class MyJButton extends JButton {
 		 SimpleGUICard demoCard = new SimpleGUICard();
 		 demoCard.add("Hello World");
 		 demoCard.add(new java.util.Date());
+		 demoCard.add(new Runnable() {public void run() {} });
 		 demoCard.repaint();
 	 }
  }

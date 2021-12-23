@@ -50,7 +50,7 @@ class GroupByExamples {
         Map<Integer, Long> numOfGoalsByYear = 
         		goals.stream()
         		  .collect(Collectors
-        				  .groupingBy(Goal::getYear,Collectors.counting()));
+        				  .groupingBy(Goal::getYear,Collectors.counting()));   // counts the number of objects of each group
         System.out.println(numOfGoalsByYear);
        
         System.out.println("\n B. Number  of goals by player ");
@@ -69,3 +69,17 @@ class GroupByExamples {
 	}
 
 }
+
+
+(howtogroup,overWhatToCompute,whatToComput)
+(by team, age, avg)
+(by team, goals, count)
+
+SQL
+SELECT teamName, count (*)
+From Goals
+GROUP BY team
+
+
+
+

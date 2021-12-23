@@ -12,7 +12,8 @@ import java.lang.reflect.*;
  * In addition the attributes of a class
  */
 
-interface dummy {}
+interface dummyTop {}
+interface dummy extends dummyTop {}
 
 class DummySuperclass {
 	int lala;
@@ -46,6 +47,7 @@ class Tester {
 	public static void main (String[] arg){
 		  Person p0 = new Person("Yannis",20);
 		  Object p1 = p0;
+		  
 		  //-------
 		  	  
 		  Class c = p1.getClass();   // Person class
@@ -53,11 +55,16 @@ class Tester {
 		  
 		  System.out.println("Class name   : " + c.getName());
 		  System.out.println("Supclass name: " + supc.getName());
-		  System.out.print("Interfaces   : ");
+		  System.out.println("Supsupclass name: " +   supc.getSuperclass().getName());
+		  System.out.println("Supsupsupclass: " +   supc.getSuperclass().getSuperclass());
+		  
+		  System.out.println("Interfaces   : ");
 		  Class[] ci = c.getInterfaces();
 		  for (int i=0; i<ci.length;i++){
 			  System.out.print(ci[i].getName()+ " ");
+			  //System.out.println(">>>"+ ci[i].getSuperclass().getName() + ci[i].getInterfaces().getName());
 		  }
+		  
 		  System.out.println();
 		  Field[] pf = c.getDeclaredFields();
 		  System.out.println("Fields       : ");
@@ -67,7 +74,15 @@ class Tester {
 					  + " | " + pf[i].toString());
 		  }
 		  
-		  Class[] parameterTypes1 =   {String.class, int.class};
-		  Class[] parameterTypes2 = new Class[] {String.class};
+		  //Class[] parameterTypes1 =   {String.class, int.class};
+		  //Class[] parameterTypes2 = new Class[] {String.class};
+		  
+		  Class[]  pinakas = new Class[2]; pinakas[0]=int.class; pinakas[1]=char.class;
+		  Class[]  pinakas2 = {int.class, char.class};
+		  Object[] pinakas3 = {int.class, char.class};
+		  Class[]  pinakas4 = (Class[]) pinakas3;
+		 
+		  
+		  
     }
 }

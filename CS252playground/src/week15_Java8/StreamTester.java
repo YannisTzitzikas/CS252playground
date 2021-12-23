@@ -32,6 +32,7 @@ class StreamBuilders {
 
 	   	  System.out.println("==================");
 	       
+	   	  /*
 	   	  // Parallel 
 	       String output1 =  input.parallelStream()
 					  .filter(e -> {
@@ -42,5 +43,6 @@ class StreamBuilders {
 					  { System.out.println("REDUCE: s1="+s1+", s2="+s2);
 					    return   s2+s1;}) ;
 	       System.out.println("\nOutput1: "+ output1);
+	       */
      }
 }

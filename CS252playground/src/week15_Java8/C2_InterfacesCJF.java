@@ -29,7 +29,8 @@ public class C2_InterfacesCJF {
 		
 		
 		l.forEach(System.out::println);
-		
+	
+		l.forEach(cons);
 
 	}
 

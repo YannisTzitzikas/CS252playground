@@ -25,10 +25,11 @@ class G_GUI extends JFrame {
 		);
 		
 		b1.addActionListener(e -> { System.out.println("AAAA");
-								    b1.setText(b1.getText()+ "-");
+								    b1.setText(b1.getText()+ "*");
 								  });
 		
-		b1.addActionListener( otiNanai -> {  b1.setBackground(Color.RED);   });
+		b1.addActionListener( otiNanai -> { b1.setText(b1.getText()+ b1.getText()); });
+											//b1.setBackground(Color.RED);   });
 	}
 
 	public static void main(String[] args) {

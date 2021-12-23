@@ -1,5 +1,6 @@
 package week15_Java8;
 import java.util.List;
+import java.util.stream.Stream;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -8,12 +9,12 @@ public class B_LambasFirst {
 	 
 	 System.out.println("============lambda with one statement==============");
 	 ArrayList<Integer> al = new ArrayList();
-	 al.add(4);
-	 al.add(8);
-	 al.add(3);
-	 al.add(9);
+	 al.add(1);
+	 al.add(2);
+	 al.add(30);
+	 al.add(77);
 	 
-	 al.forEach(x -> System.out.println(x*x));
+	 al.forEach(x -> System.out.println("Το τεγράγωνο του "+x + " είναι " + x*x));
 	
 	 System.out.println("========lambda with a block of statements===========");
 	List<Double> lf = Arrays.asList(9.0,55.0,10.5);
@@ -33,6 +34,7 @@ public class B_LambasFirst {
 	lf.forEach(x -> {
 		System.out.println(author + x);
 	}); 
+	//author = "Yannis2";  // not ok
 	
 	
 	System.out.println("========lambda with NOT OKvariable capture===========");
@@ -55,12 +57,24 @@ public class B_LambasFirst {
 	System.out.println("========Streams parallel===========");
 	
 	
+	System.out.print("\nSequential printing:");
 	al.stream().forEach(x -> System.out.print(x+","));
-	
-	System.out.println();
+		
+	System.out.print("\nParallel   printing:");
 	al.stream().parallel().forEach(x -> System.out.print(x+","));
 	
 	//System.out.println();
 	//al.stream().parallel().forEach(x -> System.out.print(x+","));
+	
+	//=================================================
+	/*
+	System.out.println();
+	String test = Stream.of("a", "b", "c", "d")
+		    .reduce(">", (x1,x2)-> {
+		    								System.out.println("x1="+x1+" x2="+x2 + " cur="+x2+x1);
+		    								return x2 + x1;
+		    							 } );
+		System.out.println(test);    
+	*/	
  }
 }

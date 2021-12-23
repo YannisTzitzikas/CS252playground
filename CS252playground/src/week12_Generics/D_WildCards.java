@@ -52,8 +52,7 @@ class JustTesting {
 			System.out.println(lista);  // I don't need to use the type in the body
 			lista.add(new Fruit());
 			lista.add(new Apple());
-			//lista.add(new Object());
-			
+			//lista.add(new Object());    // we cannot be sure about the real type of ? (it could either Object or Fruit)   			
 	 }
 	 
 	 /*

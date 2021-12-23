@@ -134,8 +134,8 @@ public class D_Streams {
 	System.out.println("TELOS");
 
 	Stream<String> lala  = Stream.of("Τι", "είναι", "αυτό", ";");
-	System.out.println(lala.reduce("===>", (x1,x2)-> x1 + " " +  x2 ));
-	System.out.println(lala.reduce("===>", (x1,x2)-> x1 + " " +  x2 ));	
+	System.out.println(lala.reduce("===>", (x1,x2)-> x1 + "*" +  x2 ));
+	//System.out.println(lala.reduce("===>", (x1,x2)-> x1 + " " +  x2 ));	
 	
  }
 }

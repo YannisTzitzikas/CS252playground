@@ -34,6 +34,9 @@ class TestMethodReferences {
 		nl.forEach(constr::apply);
 		
 		
+		Consumer =
+		
+		
 		// CALLLING System.out.println  for each elem of a list of Strings
 		
 		//nl.forEach(x -> System.out.println(x));

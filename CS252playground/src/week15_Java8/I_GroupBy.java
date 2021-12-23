@@ -70,16 +70,19 @@ class GroupByExamples {
 
 }
 
+/*
+Notes: The general form of analytic queries (as three functions)
+(howToFormGroups,overWhatFieldToCompute,whatToComputeOverThatField)
+Examples:
+(by team, age, avg)  // avg ages of teams
+(by team, goals, count) // count goals of teams
 
-(howtogroup,overWhatToCompute,whatToComput)
-(by team, age, avg)
-(by team, goals, count)
+SQL:
 
-SQL
 SELECT teamName, count (*)
-From Goals
+from Goals
 GROUP BY team
 
 
-
+*/
 

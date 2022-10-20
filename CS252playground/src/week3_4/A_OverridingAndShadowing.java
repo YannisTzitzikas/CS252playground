@@ -7,12 +7,12 @@ class Ugrad {
 	int DM = 140;  int perYear() { return DM/4; }
 }
 
-class Grad extends Ugrad { 
+class Grad extends Proptyxiakos { 
 	int DM = 28; 
 	int perYear() { return DM/2; };
 	int super_perYear() {return super.perYear();}
 	int superDM() {return super.DM; } 
-	int UgradCastDM() {return ((Ugrad)this).DM; }
+	int UgradCastDM() {return ((Proptyxiakos)this).DM; }
 }
 
 class TestShadowingAndOverriding {
@@ -24,7 +24,7 @@ class TestShadowingAndOverriding {
 	System.out.println(g.super_perYear()); // 35
 	System.out.println(g.superDM()); 	   //140
 	System.out.println(g.UgradCastDM());   //140
-	Ugrad u = (Ugrad) g;
+	Proptyxiakos u = (Proptyxiakos) g;
 	System.out.println(u.DM);              //140
 	System.out.println(u.perYear()); }   //  14
 	

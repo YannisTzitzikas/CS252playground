@@ -95,16 +95,20 @@ import javax.swing.JOptionPane;
     // params:  radius, centerx, centery, color
     public static void setPixelsCircle(int radius, int centerX, int centerY, Color col){ 
      double x;
-     double y;     
+     double y; 
+     double numOfRings=3; // how many rings to use for drawing a ball
       if ((radius >= MIN_RADIUS) && (radius < MAX_RADIUS))  {
 
-    	for (int i=0; i<=360; i++){	
-    		x =  centerX + (radius* Math.cos(Math.toRadians((int)i)));
-    		y =  centerY + (radius* Math.sin(Math.toRadians((int)i)));
-    		if (x>0 && y>0 && x<N && y<N) { // fits in canvas		    		
-    			pixels[Math.abs((int)x)][Math.abs((int)y)].setColor(col);	
-    		}	
-    	}	
+    	for (int j=0;j<numOfRings;j++)   {
+	    	for (int i=0; i<=360; i++){	
+	    		x =  centerX + ((radius-j)* Math.cos(Math.toRadians((int)i)));
+	    		y =  centerY + ((radius-j)* Math.sin(Math.toRadians((int)i)));
+	    		if (x>0 && y>0 && x<N && y<N) { // fits in canvas		    		
+	    			pixels[Math.abs((int)x)][Math.abs((int)y)].setColor(col);	
+	    		}	
+	    	}
+    	}
+    	
      }
    }
     
@@ -132,7 +136,7 @@ import javax.swing.JOptionPane;
 		    setBackgroundPixels(N, Color.white); // background color
 		    StartRecursion(N, Color.green); // drawing the Christmas tree
 		    displayPicture() ;
-		    try {   Thread.sleep(500); } catch (Exception e ) { }
+		    try {   Thread.sleep(100); } catch (Exception e ) { }
 		    
 	    }
     }  

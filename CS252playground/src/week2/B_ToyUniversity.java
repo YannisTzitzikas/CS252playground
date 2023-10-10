@@ -14,14 +14,27 @@ class  University {
 		tmimata[numOfTmimata++] = t;
 	}
 	public String toString() {
-		return name + " " + numOfTmimata  + " " +  tmimata;
+		return name;
+		//return name + " " + numOfTmimata  + " " +  tmimata;
+	}
+	
+	University(String name) {
+		this.name = name;
+	}
+	
+	University() {
+		
 	}
 }
 
 // Resposiblilities: Na dinei katalogo twn didaskliwn eksaminou
 class Tmima  {
-	 String 		name;
+	String 		name;
 	University  ofUniversity; 
+	
+	public String toString() {
+		return name + " ("  + ofUniversity + ")";
+	}
 	
 	Tmima(String t, University u) {
 		name = t;
@@ -39,7 +52,18 @@ class Spoudastis {
 	void enroll(Didaskalia d) { }
 	void printAnalytiki() { }
 	void ekdoshPtyxiou() {} 
+	
+	Spoudastis()  {
+		System.out.println(">>Creation of a student");
+	}
 }
+
+class Grad extends Spoudastis {
+	Grad()  {
+		System.out.println(">>Creation of a grad student");
+	}
+}
+
 
 
 class Eggrafh {
@@ -79,7 +103,26 @@ class UniversityTest {
 	  University uoa = new University();
 	  uoa.name = "Καποδιστριακό Πανεπιστήμιο Αθηνών";
 	  
-	  System.out.println(uoc);
+	  Tmima csd = new Tmima("Τμήμα Επιστήμης Υπολογιστών", uoc);
+	  Tmima math = new Tmima("Τμήμα Μαθηματικών", uoc);
+	  
+	  Tmima[] tmimata = {csd, math, new Tmima("Φυσικό",uoc),
+			  			 new Tmima("Computer Science, USA", new University("ΜΙΤ"))
+	  };
+	  
+	  for (Tmima t: tmimata ) {
+		  System.out.println(t);
+	  }
+	  
+	  
+	 // Grad s = new Grad();
+	  
+	  Grad s2 = new Grad() { public String toString() {return " Αγνωστος τύπος μεταπτυχιακού";}};
+	  
+	  //System.out.println(s);
+	  System.out.println(s2);
+	  
+	   
 	  
 	
   }

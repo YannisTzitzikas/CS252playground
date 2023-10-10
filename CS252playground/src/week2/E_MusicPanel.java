@@ -16,7 +16,14 @@ class MyButton extends JButton implements ActionListener {
 	int v =0;
 	public void actionPerformed (java.awt.event.ActionEvent e) {
 		Player pl = new Player();
-		pl.play("["+v+"]"); // todo: thread
+		
+		//pl.play("["+v+"]"); // single thread (one execution flow)
+		
+		
+		Thread t = new Thread(new Runnable() {public void run() {pl.play("["+v+"]"); } });
+		t.start();
+		
+		
      }			
 	MyButton(String t, int v) {
 		super(t);

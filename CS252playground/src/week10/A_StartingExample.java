@@ -8,22 +8,22 @@ package week10;
  *  2. Uncomment Part C
  */
 class MyThread_A extends Thread {
-	static final int NUM=10;
+	static final int NUM=100;
 	public void run() {
 	  for (int i=0; i<NUM; i++) {
 	 	 System.out.print(" A"+i);
-		 try {   	Thread.sleep(300);    } catch (Exception e) {    }	
+		 try {   	Thread.sleep(100);    } catch (Exception e) {    }	
 	  }
 	}
 	}
 
 class MyThread_B   implements Runnable {
-	static final int NUM=10;
+	static final int NUM=100;
 	
 	public void run() {
 		for (int i=0; i<NUM; i++) {
 			System.out.print(" B" +i);
-			try { 	Thread.sleep(800);   } catch (Exception e) { }
+			try { 	Thread.sleep(50);   } catch (Exception e) { }
 		}
 	}
 }
@@ -31,6 +31,9 @@ class MyThread_B   implements Runnable {
 class A_StartingExample {
 	public static void main(String arg[]) {
 		
+		try { 	Thread.sleep(2000);   } catch (Exception e) { }
+		
+		System.out.println("\n-Καλημέρα !");
 				
 		/* Creation of the first thread */
 		 MyThread_A mtA = new MyThread_A();
@@ -40,6 +43,10 @@ class A_StartingExample {
 		 Thread mtB = new Thread(new MyThread_B());
 		 mtB.start();
 		 
+		 System.out.println("\n-Καλό μεσημέρι !");
+		 
+		 /*
+		 System.exit(1);
 		 /*
 		//perimene na teleiwsei to B
 		 
@@ -75,7 +82,9 @@ class A_StartingExample {
 		  ).start();
 		 */
 		 
-		 System.out.println("\n-End of main: Καλημέρα !");
+		 
+		 
+		 
 		 
 	}
 }

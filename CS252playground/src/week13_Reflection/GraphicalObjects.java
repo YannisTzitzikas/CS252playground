@@ -145,7 +145,7 @@ class MyJButton extends JButton {
 		super("TEST");  
 		setBounds(200,100,350,700);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		GridLayout layout=new GridLayout(0,1,5,5);
+		GridLayout layout=new GridLayout(2,1,5,5);
 		setLayout(layout);
 				
 		add(new JButton("just a button"));

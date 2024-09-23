@@ -1,6 +1,7 @@
 package week15_Java8;
 interface Taxer {
 	double getTaxOf(double value) ;
+	//String getName(String s);
 }
 
 
@@ -22,7 +23,7 @@ class Testing {
 		System.out.println(Tameio.getTax(100.0, (x) -> x*.10));  // 10% tax
 		System.out.println(Tameio.getTax(100.0, (x) -> x*.23));  // 23% tax
 		
-		
+		//System.out.println(Tameio.getTax(100.0, (x) -> { return null;}));  // 23% tax
 		
 		Taxer crazyTaxer  = (lol) -> lol*0.001 ; 
 		Taxer madTaxer    = (mad) -> -mad*1.50 ;

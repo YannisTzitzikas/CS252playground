@@ -60,22 +60,16 @@ public class D_GUI 	extends JFrame implements ActionListener {
 			//  new Runnable <......start()
 			
 			b4.setText("0"); 
-			for (int i=1; i<50; i++) {
+			for (int i=1; i<100; i++) {
 				try {
 		        	   Thread.sleep(50);
 		        } catch (Exception e) {
 		        	   
 		        }
-				b4.setText(" "+ i);
+				//b4.setText(" "+ i);
+				System.out.println(i);
 			}
-			for (int i=50; i<100; i++) {
-				try {
-		        	   Thread.sleep(50);
-		        } catch (Exception e) {
-		        	   
-		        }
-	        	 b4.setText("b4: "+ i);
-	         }
+			
 			b4.setText(" Τέλειωσα το μέτρημα");
 			
 		} else {

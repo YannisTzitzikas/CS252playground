@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-
+ 
 class G_GUI extends JFrame {
 	G_GUI() {
 		super();

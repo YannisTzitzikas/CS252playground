@@ -99,6 +99,10 @@ class TEST {
 	public static void main(String[] lala) {
 		SimpleGUICard s = new SimpleGUICard();
 		s.add(new String("test"));
+		s.add(new B());
 		
 	}
 }
+
+class A {}
+class B extends A {}

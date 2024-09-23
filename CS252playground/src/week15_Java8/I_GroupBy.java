@@ -25,11 +25,13 @@ class Goal {
 	String getPlayer() 	{return player;}
 	String getTeam() 	{return team;}
 	int getYear() 		{return 1900+date.getYear();}
+	
+	String getTeamAndYear ( )		{return getTeam() + "-"+ getYear();}
 	Goal(Date date, String player, String team) {
 		this.date =date; this.player=player; this.team=team;
 	}
 }
-
+ 
 
 class GroupByExamples {
 
@@ -41,7 +43,13 @@ class GroupByExamples {
 			goals.add(new Goal(new SimpleDateFormat("yyyy-MM-dd").parse("2018-01-01"),"Mesi","Barcelona"));
 			goals.add(new Goal(new SimpleDateFormat("yyyy-MM-dd").parse("2019-01-01"),"Mesi","Barcelona"));
 			goals.add(new Goal(new SimpleDateFormat("yyyy-MM-dd").parse("2020-01-01"),"Mesi","Barcelona"));
-			goals.add(new Goal(new SimpleDateFormat("yyyy-MM-dd").parse("2020-01-01"),"Papadakis","Ofi"));
+			goals.add(new Goal(new SimpleDateFormat("yyyy-MM-dd").parse("2020-01-01"),"Semedo","Ofi"));
+			goals.add(new Goal(new SimpleDateFormat("yyyy-MM-dd").parse("2022-01-01"),"Titos","Panathinaikos"));
+			goals.add(new Goal(new SimpleDateFormat("yyyy-MM-dd").parse("2022-11-12"),"Titos","Panathinaikos"));
+			goals.add(new Goal(new SimpleDateFormat("yyyy-MM-dd").parse("2022-11-12"),"Yannis","Panathinaikos"));
+			goals.add(new Goal(new SimpleDateFormat("yyyy-MM-dd").parse("2023-12-19"),"Yannis","Minoiki"));
+			goals.add(new Goal(new SimpleDateFormat("yyyy-MM-dd").parse("2023-12-19"),"Argyros","Minoiki"));
+			
 		} catch (ParseException e) {e.printStackTrace();}
 		
 		
@@ -53,6 +61,9 @@ class GroupByExamples {
         				  .groupingBy(Goal::getYear,Collectors.counting()));   // counts the number of objects of each group
         System.out.println(numOfGoalsByYear);
        
+        
+        
+        
         System.out.println("\n B. Number  of goals by player ");
         Map<String, Long> goalsByPlayer = 
         		goals.stream()
@@ -65,6 +76,13 @@ class GroupByExamples {
           		goals.stream()
       		  .collect(Collectors
     				  .groupingBy(Goal::getTeam,Collectors.counting())));
+        
+        
+        System.out.println("\n D. Number  of goals per team and year\n" +
+          		goals.stream()
+      		  .collect(Collectors
+    				  .groupingBy(Goal::getTeamAndYear ,Collectors.counting())));
+        
         
 	}
 

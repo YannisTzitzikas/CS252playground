@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
+import java.util.TreeSet;
 
 /**
  * Basic examples related to Sets
@@ -16,41 +17,61 @@ import java.util.ListIterator;
  class TestCollection {
 	public static void main(String args[]) {
    // Create an empty set 
-   Collection set = new HashSet();	   
+   //Collection collection = new ArrayList();	   // test Set and ArrayList
+   //Collection collection = new HashSet();
+   Collection collection = new TreeSet();
+   
    //Collection set = new LinkedList();
    // Populate the set
-   set.add(47);
-   set.add(new Integer(47));
-   set.add(new Double(3.14));
-   set.add(new Character('h'));
-   set.add(new Character('h'));
-   set.add('h');
-   set.add("h");
-   Object o  = new Object();
-   set.add(o);
-   set.add(o);
-   set.add(o);
    
-   System.out.println("Πληθυκότητα:" + set.size());
+   collection.add("Yannis");   
+   collection.add("Nikos");
+   collection.add("Yannis");
+   collection.add("Maria");
+   
+   
+   //collection.add(50);   
+   //collection.add(47);
+   //collection.add(48);
+   //collection.add(47);
+   
+   
+   /*
+   collection.add(new Integer(47));
+   //collection.add(new Double(3.14));
+   collection.add(new Character('h'));
+   collection.add(new Character('h'));
+   collection.add('h');
+   collection.add("h"); //string
+   Object o  = new Object();
+   collection.add(o);
+   collection.add(o);
+   collection.add(o);
+   */
+   System.out.println("Πληθυκότητα:" + collection.size());
+   
+  // System.exit(1);
+   
    // iterate through the set of keys 
-   Iterator iter = set.iterator();
+   Iterator iter = collection.iterator();
+   
    /*
    System.out.println(iter.next());
    System.out.println(iter.next());
    System.out.println(iter.next());
    System.out.println(iter.next());
    System.out.println(iter.next());
-   //System.out.println(iter.next());
+   System.out.println(iter.next());
+      
+   System.exit(1);
    */
    
-   //System.exit(1);
-    
-   
    while (iter.hasNext()) {
-   //Assume items are printed in same order 
-   //they were put in
-	System.out.println(">>>>" + iter.next());
+	   //Assume items are printed in same order 
+	   //they were put in
+	   Object next = iter.next();
+	   System.out.println(">" + next + "\t\t of type " + next.getClass());
    } // end while
    
   } // end main
-} // end TestCollection
+} // end TestCollection   ...

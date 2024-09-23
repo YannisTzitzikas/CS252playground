@@ -17,8 +17,9 @@ public class GraphicalObjects_Client {
 	  SimpleGUICard sc = new SimpleGUICard();
 	  
 	  sc.add("This is a test");
-	  sc.add(2);
+	  sc.add(5);
 	  sc.add(new week13_Reflection.CCC());
+	  sc.add("test2");
 	  //sc.add(new Person());
 	  sc.add(new Runnable() {
 		  public void run() {

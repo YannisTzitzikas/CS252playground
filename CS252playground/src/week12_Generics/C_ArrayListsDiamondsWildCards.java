@@ -15,14 +15,31 @@ class TestGenerics{
 		System.out.println(col);
 		List <String> l1 = new ArrayList<String>();
 		List<Integer> l2 = new ArrayList<Integer>();
-		//l2 = l1; // not compatible 
-		System.out.println(l1.getClass() ==  l2.getClass()); // why we get true? Due to type erasure both have the type ArrayList<Object>
+		
+		//l1 = l2;
+		//l2 = l1;
+		System.out.println(l1.getClass().equals(l2.getClass()));
+		
+		TestGenerics tmp = new TestGenerics();
+		System.out.println(tmp.getClass());
+		
 		System.out.println(l1.getClass()); 
 		System.out.println(l2.getClass());
-	
+		
+		System.exit(1);
+		
+		
+		
+		//l2 = l1; // not compatible 
+		//System.out.println(l1.getClass() ==  l2.getClass()); // why we get true? Due to type erasure both have the type ArrayList<Object>
+		
+		List<? extends Object> l4;
+		//l1 = (List<String>) l4;
+		
 	}
 	
 	void testAssignments() {
+		System.out.println("Test Assignments");
 		Set<Portokali>  p1 = new HashSet<Portokali>();
 		Set<Portokali>  p2 = new HashSet<>();
 		Set<Frouto>     f1 = new HashSet<Frouto>();
@@ -45,19 +62,28 @@ class TestGenerics{
 		// normal case
 		Set<Frouto>   t2tmp = new HashSet<>();
 		t2tmp.add(new Frouto());  
+		t2tmp.add(new Portokali());  
 		
 		
 		// "Read Only"
 		Set<? extends Frouto>   t2 = new HashSet<>();
-		//t2.add(new Frouto());
-		//t2.add(new Portokali());
+		//t2.add(new Frouto()); // o agnwstos typos ? tha mporouse na einai mia ypoklash tou Froutou, ara den mporw na valw apla ena fruit
+		//t2.add(new Portokali()); // gia ton idio logo den douleuei
+		//t2.add(new BigOrange()); // gia ton idio logo den douleuei
+				
+		t2 = t2tmp;
+		System.out.println(t2);
 		t2.add(null);
+		System.out.println(t2);
 		t2.clear();
+		System.out.println(t2);
 		
 		t2.add(null);
 		
+		
+		///*
 		Set<BigOrange> bos = new TreeSet<>();
-		bos.add(new BigOrange());
+		//bos.add(new BigOrange());
 		t2 = bos;
 		
 		
@@ -124,21 +150,25 @@ class TestGenerics{
 		v.add(null); // valid
 		System.out.println(v.get(1));
 		v.clear(); // valid;
+		
+		//*/
+		System.out.println("-method end-");
 	}
 	
 	public static void main(String arg[]) {
 		TestGenerics o = new TestGenerics();
-		o.testSimpleTypes();
+		//o.testSimpleTypes();
 		//o.testAssignments();
 		//o.testAssignments_bounds();
-		//o.testAssignments_wildcards();
+		o.testAssignments_wildcards();
 		
+		/*
 		List<Portokali> lala0 = new ArrayList();
 		lala0.add(new BigOrange());
 		
 		List<Map<String,Set<ArrayList<Fruit>>>> lala;
 		lala = new LinkedList((Collection) new TreeMap());
 		//lala.get(0).put("a",(new HashSet()).add(new ArrayList<Fruit>()));
-		
+		*/
 	}
 }

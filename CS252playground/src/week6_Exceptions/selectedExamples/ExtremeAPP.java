@@ -10,12 +10,19 @@ public class ExtremeAPP {
 	
 	public static void main(String[] lala) {
 		System.out.println("I AM STARTING");
+		
+		// without try-catch
+		//int[] pi = new int[1000*1000*1000]; // heap space
+		//infiniteLoop(); // stackOverflow error	
+		//double d = 1/0;	
+	
+		// with try-catch
 		try {
 			//int[] pi = new int[1000*1000*1000*1000]; // int overflow exception
 			int[] pi = new int[1000*1000*1000]; // heap space
 			
 			//infiniteLoop(); // stackOverflow error	
-			double d = 1/0;	
+			//double d = 1/0;	
 			//System.out.println(1/0); // arithmetic exception
 		
 			//throw new Error();

@@ -15,17 +15,20 @@ class Box<T> {
         //integerBox.inspect("some text"); //compile error! here
         integerBox.inspect(18); 
         
+       // System.exit(1);
         
         Box<String> stringBox = new Box<String>();
         stringBox.set("Yannis");
-        //stringBox.set(22); // compile error
+       //stringBox.set(22); // compile error
         
         stringBox.inspect(11);
         stringBox.<Integer>inspect(11);
+        
+        System.exit(1);
         //stringBox.<Float>inspect(11);
         stringBox.<Float>inspect(11.4f);
         stringBox.inspect(11.4f);
-        // stringBox.inspect("some text"); // Compile Error too. 
+        stringBox.inspect("some text"); // Compile Error too. 
        
         }
 }

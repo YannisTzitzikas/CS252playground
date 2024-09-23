@@ -1,10 +1,10 @@
 package week6_Exceptions.selectedExamples;
 class StudentNotFoundException extends Exception { }
 
-class Student { 
+class StudentCatalog { 
    int getAMOf(String s) throws StudentNotFoundException   { return 0;}
 }
-class GradStudent extends Student { 
+class GradStudentCatalog extends StudentCatalog { 
   int getAMOf(String s)  { 
 	  try { 
 		  return super.getAMOf(s);

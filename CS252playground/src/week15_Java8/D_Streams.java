@@ -19,35 +19,49 @@ public class D_Streams {
 			myList
 			    .stream()
 			    .filter(s -> s.startsWith("c"))
-			    .map(String::toUpperCase)
+			    .map(String::toUpperCase)  // (x -> toUpperCase(x))
 			    .sorted()
 			    .forEach(System.out::println);
+			
+			
 
 			// C1
 			// C2
 	System.out.println(" ////////////////////////////////////////////////////////////////////////////////////");	 ////////////////////////////////////////////////////////////////////////////////////
-	IntStream.of(42).forEach(System.out::println);
+	IntStream.of(42,20).map(x->x/2).map(x->2*x).forEach(x-> {System.out.print((x+1)+" ");});
+	System.out.println();
 	
-	IntStream.range(1, 4)
+	IntStream.range(100, 99)
 		    .forEach(System.out::println);
 
 		// 1
 		// 2
-		// 3		
+		// 3	
+	
+	//IntStream.revRange(10,0).forEach(System.out::println);
+	
+	
+	
 	System.out.println(" ////////////////////////////////////////////////////////////////////////////////////");
 	
-	Arrays.stream(new int[] {1, 2, 3})
-    .map(n -> 2 * n + 1)
+	Arrays.stream(new int[] {1,2,3})
+	.filter (x-> { System.out.print("("+x+")");return true;})
+    .map(n -> {int toReturn = 2 * n + 1; System.out.println("<"+n+"->"+ toReturn+">"); return toReturn;})
+    .filter (x-> { System.out.print("["+x+"]");return false;})
     .average()
     .ifPresent(System.out::println);  // 5.0
+	
+	
 	
 	System.out.println(" ////////////////////////////////////////////////////////////////////////////////////");
 	
 	Stream.of("a1", "a2", "a3")
-    .map(s -> s.substring(1))
-    .mapToInt(Integer::parseInt)
+    .map(s -> s.substring(1))  // "1", "2", "3"
+    .mapToInt(Integer::parseInt)  // 1,2,3
     .max()
     .ifPresent(System.out::println);  // 3
+	
+	
 	
 	System.out.println(" ////////////////////////////////////////////////////////////////////////////////////");
 	IntStream.range(1, 4)
@@ -57,11 +71,14 @@ public class D_Streams {
 		// a1
 		// a2
 		// a3
+	
+	
 	System.out.println(" ////////////////////////////////////////////////////////////////////////////////////");
 	Stream.of(1.0, 2.0, 3.0)
     .mapToInt(Double::intValue)
-    .mapToObj(i -> "a" + i)
+    .mapToObj(i -> "c" + i)
     .forEach(System.out::println);
+	
 	
 	// a1
 	// a2
@@ -87,6 +104,23 @@ public class D_Streams {
 		forEach: c
 	 */
 	
+	System.out.println("============");
+	boolean found = IntStream.of(5, 1, 9, 4, 8,  9, 4, 8,  9, 4, 8,  9, 4, 8,  9, 4, 8 )
+			.filter(s -> {
+				System.out.println("filter: " + s);
+				return true;
+			})
+			.anyMatch( x -> x>3);
+    System.out.println(found);
+	
+   
+    
+    
+    //.forEach(s -> System.out.println("forEach: " + s));
+
+	
+	
+	
 	System.out.println(" ////////////////////////////////////////////////////////////////////////////////////");
 	Stream.of("d2", "a2", "b1", "b3", "c")
     .map(s -> {
@@ -102,7 +136,8 @@ public class D_Streams {
 		// anyMatch: D2
 		// map:      a2
 		// anyMatch: A2
-			
+	
+	 
 	System.out.println(" ////////////////////////////////////////////////////////////////////////////////////");
 	
 	Stream.of("d2", "a2", "b1", "b3", "c")

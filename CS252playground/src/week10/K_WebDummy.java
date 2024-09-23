@@ -10,7 +10,7 @@ class ComputationalTask {
 	static void work(String request) {	
 		System.out.println("Server: Starting working on request " + request);
 		try {
-			Thread.sleep(550); //50 ok
+			Thread.sleep(50); //The time needed to carry out the task
 			System.out.println(request);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -57,11 +57,12 @@ class WebServer {
 }
 
 class ClientBrowser {
+	
 	static int id=0;
 	ClientBrowser() {
 		id++;
 		System.out.println("Client " + id + " started");
-		String response = WebServer.service("Request from client " + id);
+		String response = WebServer.service("Request from client " + id + " Give me www.csd.uoc.gr");
 		//System.out.println(response);
 	}
 }
@@ -70,7 +71,7 @@ class ClientBrowser {
 
 class WebTester {
 	public static void main(String[] lala) {
-		int K=100000;
+		int K=100*1000;
 		for (int i=0;i<K;i++) {
 			ClientBrowser cb = new ClientBrowser();
 		}

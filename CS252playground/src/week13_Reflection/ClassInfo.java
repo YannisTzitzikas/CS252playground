@@ -1,8 +1,9 @@
 package week13_Reflection;
 
+interface foo {};
 class A {};
 class B extends A {};
-class C extends B implements Cloneable {};
+class C extends B implements Cloneable, foo {};
 
 public class ClassInfo {
 	
@@ -19,8 +20,12 @@ public class ClassInfo {
     			"javax.swing.JOptionPane",
     			};
     	
+    	String[] argsTmp = { "week13_Reflection.C" };
     
-    	String[] classesToAnalyze = argsw;
+    	//String[] classesToAnalyze = argsw;
+    	//String[] classesToAnalyze = argswExtra;
+    	String[] classesToAnalyze = argsTmp;
+    	
     	
         for(int i = 0; i < classesToAnalyze.length; i++) {
             try {

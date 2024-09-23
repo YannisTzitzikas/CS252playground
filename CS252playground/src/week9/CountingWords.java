@@ -17,6 +17,7 @@ class Mysterious {
    }
    try {
 	    TreeMap map = new TreeMap();
+	    //Map map = new HashMap();
 	    Integer one = new Integer(1);
 	    while ( ( in.nextToken() != in.TT_EOF ) ) { // while we haven't reached EOF
 			if ( in.ttype == in.TT_WORD ) { // the current token is a word
@@ -28,6 +29,26 @@ class Mysterious {
 			    map.put( in.sval, freq ); // 
 			}
 	    }
+	    
+	    /*
+	    // print the contents of the map
+	    //System.out.println(map);
+	    for (Object key: map.keySet()) {
+	    	System.out.println(key + " : " + map.get(key));
+	    }
+	    */
+	    
+	    //Pedio orismou
+	    System.out.println(map.keySet());
+	    
+	   //Olhh synartisi
+	    System.out.println(map);
+	    
+	    
+	    System.exit(1);
+	    // Pedio timwn
+	    System.out.println(map.values());
+	    System.out.println(new TreeSet(map.values()));
 	    
 	    SortedSet tmp = new TreeSet(map.keySet());
     	    String z = (String)tmp.last();

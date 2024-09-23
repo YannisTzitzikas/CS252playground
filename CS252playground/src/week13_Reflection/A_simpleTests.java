@@ -46,18 +46,24 @@ class Student extends Person {}
 class Tester {
 	public static void main (String[] arg){
 		  Person p0 = new Person("Yannis",20);
-		  Object p1 = p0;
+		  Object p1 = p0; // you can access only those fields and methods defined by Object
 		  
 		  //-------
 		  	  
 		  Class c = p1.getClass();   // Person class
+		  System.out.println(c);
+		  
+		  
+		  
 		  Class supc = c.getSuperclass();  // superclass of Person
 		  
 		  System.out.println("Class name   : " + c.getName());
 		  System.out.println("Supclass name: " + supc.getName());
 		  System.out.println("Supsupclass name: " +   supc.getSuperclass().getName());
-		  System.out.println("Supsupsupclass: " +   supc.getSuperclass().getSuperclass());
+		  // System.out.println("Supsupsupclass: " +   supc.getSuperclass().getSuperclass());
+		  //System.out.println(supc.getSuperclass().getSuperclass().getName());
 		  
+		 
 		  System.out.println("Interfaces   : ");
 		  Class[] ci = c.getInterfaces();
 		  for (int i=0; i<ci.length;i++){
@@ -74,13 +80,15 @@ class Tester {
 					  + " | " + pf[i].toString());
 		  }
 		  
+		  System.exit(1);
+		  
 		  //Class[] parameterTypes1 =   {String.class, int.class};
 		  //Class[] parameterTypes2 = new Class[] {String.class};
 		  
 		  Class[]  pinakas = new Class[2]; pinakas[0]=int.class; pinakas[1]=char.class;
 		  Class[]  pinakas2 = {int.class, char.class};
 		  Object[] pinakas3 = {int.class, char.class};
-		  Class[]  pinakas4 = (Class[]) pinakas3;
+		  //Class[]  pinakas4 = (Class[]) pinakas3;
 		 
 		  
 		  

@@ -7,12 +7,12 @@ class Ugrad {
 	int DM = 140;  int perYear() { return DM/4; }
 }
 
-class Grad extends Proptyxiakos { 
+class Grad extends Ugrad { 
 	int DM = 28; 
 	int perYear() { return DM/2; };
 	int super_perYear() {return super.perYear();}
 	int superDM() {return super.DM; } 
-	int UgradCastDM() {return ((Proptyxiakos)this).DM; }
+	int UgradCastDM() {return ((Ugrad)this).DM; }
 }
 
 class TestShadowingAndOverriding {

@@ -122,7 +122,7 @@ class ConsumeInteger extends Thread
 		while (hold.hasMoreData())	{
 			System.out.println("HAS MORE DATA");
 			try	{
-				Thread.sleep((int)(400));
+				Thread.sleep((int)(700));
 			}
 			catch(InterruptedException e)	{
 				System.err.println(e.toString());

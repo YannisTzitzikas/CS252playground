@@ -11,24 +11,30 @@ class HMapTests {
 		Map fc = new HashMap();
 		fc.put("maria","aspro"); //   x, f(x)
 		fc.put("maria","prasino");
-		fc.put("manouso","prasino");
-		fc.put("violeti","violeti");
-		fc.put("violeti","asxeto");
-		//fc.put( 4040,"Παπαδάκης");
-		//fc.put( 4040,"Παπαδακάκης");
+		fc.put("maria","prasino");
+		fc.put("yannis","blue");
+		fc.put("nikos","white");
+		fc.put("manousos","red");
 		System.out.println(fc);
 		
+		System.out.println("Κλειδιά        : " + fc.keySet());
+		//System.out.println("Κλειδιά (τξν)  : " + new TreeSet(fc.keySet()));
+		System.out.println("Τιμές          : " + fc.values());
+		//System.out.println("Τιμές (συν)    : " + new HashSet(fc.values()));
+		//System.out.println("Τιμές (συν+τξν): " + new TreeSet(fc.values()));
+	
 		Map fc2 = new HashMap();
-		fc2.put("Τρίτη", "Μάθημα");
-		fc2.put("violeti", "252");
+		fc2.put("Tom", "blue");
+		fc2.put("Jane", "black");
+		fc2.put("nikos","orange");
 		System.out.println(fc2);
 		
-	
 		fc.putAll(fc2); // union (with overwritting the existing keys if they exist)
 		System.out.println(fc);
 		
+		
 			
-		Object o = fc.remove("kot"); // δεν υπάρχει τέτοιο κλειδί
+		Object o = fc.remove("nikos"); // δεν υπάρχει τέτοιο κλειδί
 		System.out.println(fc);
 		System.out.println(o);
 		
@@ -45,6 +51,7 @@ class HMapTests {
 		System.out.println("Printing entrySet()");
 		System.out.println(fc.entrySet());
 		
+		System.exit(1);
 		/*
 		System.exit(2);
 		*/

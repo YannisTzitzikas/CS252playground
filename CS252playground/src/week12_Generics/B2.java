@@ -31,6 +31,9 @@ class Student extends Person implements PlugAndPlay {
 class TESTER {
 	public static void main(String[] lala) {
 		NaturalNumber<Student> nn = new NaturalNumber<Student>();
+		NaturalNumber<Person> n2; 
+		
+		
 		
 	}
 }

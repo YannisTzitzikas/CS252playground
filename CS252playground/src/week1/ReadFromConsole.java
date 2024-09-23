@@ -6,7 +6,7 @@ package week1;
 import java.util.Scanner;
 
 /**
- * @author Yannis Tzitzikas (yannistzitzik@gmail.com)
+ * @author Yannis Tzitzikas (yannistzitzik@gmail.com)  
  *
  */
 public class ReadFromConsole {

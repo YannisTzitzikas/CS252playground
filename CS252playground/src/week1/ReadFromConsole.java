@@ -39,7 +39,7 @@ public class ReadFromConsole {
 	            System.out.println(s + " is not a valid integer");
 	        }
 		 } while (a<0); 
-		 System.out.println("Bye bye");
+		 System.out.println("\nBye bye");
 	 }
 
 }

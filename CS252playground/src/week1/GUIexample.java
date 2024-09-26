@@ -1,6 +1,7 @@
 package week1;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -43,8 +44,8 @@ class Parathyro extends JFrame {
 class ParathyroSpecial extends JFrame {
 	int numOfButtons;
 	ParathyroSpecial(String title, int numOfButtons) {
-		super(title);
-		this.setVisible(true);
+		super(title + " " + numOfButtons);
+		//this.setVisible(true);
 		this.setSize(600, 600);
 		this.numOfButtons=numOfButtons;  
 		this.setLayout(new GridLayout(0,7));
@@ -65,11 +66,21 @@ class ParathyroSpecial extends JFrame {
 							Object dektis = e.getSource();
 							String msg="Boom BOOM ";
 							((JButton)dektis).setText(msg);
+							((JButton)dektis).setBackground(Color.RED); 
 							System.out.println(msg);	
 						}
 					}
 			);
-		}	
+		}
+		JButton bNewWin = new JButton("New Window");
+		bNewWin.setBackground(Color.yellow);
+		bNewWin.setFont((new Font("Arial", Font.BOLD, 12)));
+		
+		bNewWin.addActionListener(e -> new ParathyroSpecial("κουμπιά",numOfButtons*2));
+		add(bNewWin);
+		repaint();
+		this.setVisible(true);
+		
 	}
 	public void actionPerformed(ActionEvent e) {
 		Object dektis = e.getSource();
@@ -88,10 +99,10 @@ class GUIexample {
 		 System.out.print("Πόσα κουμπιά θα ήθελες: ");
 		 Scanner in = new Scanner(System.in);
 		 int a = in.nextInt();
-		 System.out.println("You typed " + a);
+		 System.out.println("Έδωσες " + a);
 		 
 		
-		ParathyroSpecial s1 = new ParathyroSpecial("lala",a);
+		ParathyroSpecial s1 = new ParathyroSpecial("Πολλά κουμπιά",a);
 		
 	}
 

@@ -22,7 +22,7 @@ public class ReadFromConsole {
 		 System.out.println("You typed " + s);
 		 
 		 
-		 System.out.print("Give me an integer: ");
+		 System.out.print("Give me an integer (unsafe version): ");
 		 int a = in.nextInt();
 		 System.out.println("You typed " + a);
 
@@ -30,7 +30,7 @@ public class ReadFromConsole {
 		 
 		 a=-1;
 		 do {
-		  System.out.print("Give me a positive integer integer: ");
+		  System.out.print("Give me a positive integer (safe version): ");
 		  s = in.next();
 		  try {
 	            a = Integer.parseInt(s);
@@ -39,7 +39,7 @@ public class ReadFromConsole {
 	            System.out.println(s + " is not a valid integer");
 	        }
 		 } while (a<0); 
-		 System.out.println("\nBye bye");
+		 System.out.println("\nYou managed to give " + a + ". Bye bye!");
 	 }
 
 }

@@ -1,7 +1,8 @@
 package appChristmasTree;
 /**
  * Author: Yannis Tzitzikas (http://www.ics.forth.gr)
- * Date: Dec 23, 2015
+ * Creation Date: Dec 23, 2015
+ * Last update: Dec 2024
  */
 
 import java.awt.Color;

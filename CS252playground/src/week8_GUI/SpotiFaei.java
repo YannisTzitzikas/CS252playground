@@ -1,3 +1,6 @@
+package week8_GUI;
+
+
 /**
  * CS252: Object-Oriented Programming
  * Computer Science Department, University of Crete
@@ -77,7 +80,7 @@ public class SpotiFaei extends JFrame implements ActionListener {
 
         // Play/Pause button
         JButton playButton = new JButton("Play");
-        playButton.addActionListener(_ -> {
+        playButton.addActionListener(e -> {
             isSongPlaying = !isSongPlaying;  // Toggle the play state
             playButton.setText(isSongPlaying ? "Pause" : "Play");  // Update button text
         });

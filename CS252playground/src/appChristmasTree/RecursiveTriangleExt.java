@@ -96,7 +96,6 @@ import javax.swing.JOptionPane;
                     pixels[(p3.getX()+p2.getX())/2][(p3.getY()+p2.getY())/2],
                     pixels[p3.getX()][p3.getY()],
                     col);
-        
            
     }
    

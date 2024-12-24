@@ -100,7 +100,7 @@ D_GUI() {
 	add(b5);
 	
 	
-	Font f = new Font("Dialog",1,20);
+	Font f = new Font("Dialog",1,24);
 	b1.setFont(f);
 	b2.setFont(f);
 	b3.setFont(f);

@@ -5,9 +5,11 @@ package week5;
 
 abstract class Actor {
 	String name = "φυσικό ή νομικό πρόσωπο";
+	String afm;
 }
 
 class XPerson extends Actor {
+	String AMKA;
 	XPerson() {
 		name = " Μανούσος";
 	}
@@ -75,6 +77,9 @@ public class RealEstateApp {
 	    c1.seller = google;
 	    c1.buyer  = microsoft;
 	    c1.agatho = company252;
+	    
+	    XPerson p = new XPerson();
+	    c1.agatho = p;
 	    
 	    System.out.println(c1);
 	    

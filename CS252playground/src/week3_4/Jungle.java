@@ -2,30 +2,36 @@ package week3_4;
 
 /*
  * Author: Yannis Tzitzikas 
- * Version V2
+ * Version V2, 2024
  */
 class Animal {
 	String name = "living being";
 	void saySomething() {} ; // δεν κάνει τίποτα
-	void reactToEarthQuake() { 
+	void reactToEarthQuake() { // 2 φορές λέει κάτι
 		saySomething(); 
 		saySomething();
-	}; // 2 φορές λέει κάτι
+	}; 
 }
 
 class Dog extends Animal {
-	void saySomething() { System.out.print("[  Γαβ]");} 
+	void saySomething() { System.out.print("[  Γαβ]");} //override
+	Dog() {
+		name = "αγριόσκυλο";
+	}
 }
 
 class Cat extends Animal {
-	String name = "Γάτα";
+	String name = "Γάτα";  // extra attribute!
 	void saySomething() { System.out.print("[Nιάου]");}  
 	void reactToEarthQuake() { 
-		super.reactToEarthQuake();
+		super.saySomething();
+		super.saySomething();
+		//super.reactToEarthQuake();
 		System.out.print("[Δεν μασάω] είμαι " + name);} 
+	Cat() {
+		super.name = "ΓΑΤΑ";
+	}
 }
-
-
 
 
 class DogEMAK extends Dog {   // εκπαιδευμένος σκύλος
@@ -38,38 +44,72 @@ class DogEMAK extends Dog {   // εκπαιδευμένος σκύλος
 class Fish extends Animal {
 	void saySomething() 	 { System.out.print("[ Μπλμ]");}  
 	void reactToEarthQuake() { System.out.print("[~~~~~]");};  // σε περίπτωση σεισμού "κυματίζει"
+	Fish() {
+		name = "σαργός";
+	}
 }
 
 
 class JungleDemo {
 	
 	public static void main(String[] aaa) {
+		System.out.println("-JUNGLE DEMO v0.1");
+		/*
+		Animal a1 = new Animal();
+		a1.saySomething();
+		a1.reactToEarthQuake();  // tipota
 		
 		Dog d1 = new Dog();
-		d1.reactToEarthQuake();
+		d1.reactToEarthQuake(); // -> γαβ γαβ
 		
-		/*
-		Cat  c1  = new Cat();
-		
+		Cat  c1  = new Cat();  // η cat δημιούργησε ένα αντικείμενο
 		c1.saySomething();
-		
 		System.out.println();
-		
 		c1.reactToEarthQuake();
 		
 		System.out.println();
-		Animal a1 = c1;
-		System.out.println(a1.name);
-		System.out.println(((Cat)a1).name);
+		a1 = c1;            // η μτβλ a1 τύπου Animal δείχνει ένα αντκμνο που δη/σε η Cat
+		System.out.println(a1.name); // αφού ενα αντικμνο τπ γατας έχει 2 ονόματα
+		                              // (το κληρονομημένο και το δικό της)
+									  // επειδή ο τύπος της μτβλ που δείχνει στο αντκμ
+		                              // είναι animal, ΘΑ διαβάσω το πεδίο name της animal
+		System.out.println(c1.name); // αφού ενα αντικμνο τπ γατας έχει 2 ονόματα
+							        // (το κληρονομημένο και το δικό της)
+									  // επειδή ο τύπος της μτβλ που δείχνει στο αντκμ
+							        // είναι  cat, ΘΑ διαβάσω το πεδίο name της cat
 		
+		System.out.println(((Cat)a1).name); // -> Γάτα
+		//System.out.println(((Dog)a1).name); // exception
 		
+		/*
 		System.out.println(a1 instanceof Cat); // true
 		System.out.println(a1 instanceof Animal); // true
 		System.out.println(a1 instanceof Object); // true
 		
+		System.exit(1);
+		
 		Animal a2 = new Animal();
 		System.out.println(a2 instanceof Cat);
+		
 		*/
+		
+		// my pets
+		System.out.println("======================");
+		Animal[] myPets =  { new Dog(), 
+							 new Cat(), 
+							 new Fish(), 
+							 new Animal() {
+									void saySomething()  { System.out.print("[ ΑΡΙΑΝΟΣ]");} 
+								}
+							}; 
+		for (Animal a: myPets) {
+			System.out.print("Τώρα θα μιλήσει η/ο/το " + a.name + ": ");
+
+			a.reactToEarthQuake();
+			System.out.println();
+		}
+		
+	
 		
 		/*
 		Animal a1 = new DogEMAK();

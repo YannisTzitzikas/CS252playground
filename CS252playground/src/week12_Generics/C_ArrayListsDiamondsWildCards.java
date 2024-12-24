@@ -12,22 +12,25 @@ class TestGenerics{
 	void testSimpleTypes() {
 		Collection<String> col = new ArrayList<String>();
 		col.add("Yannis");
+		
 		System.out.println(col);
+		
 		List <String> l1 = new ArrayList<String>();
 		List<Integer> l2 = new ArrayList<Integer>();
 		
 		//l1 = l2;
 		//l2 = l1;
+		System.out.println(l1.getClass()); 
+		System.out.println(l2.getClass());
+		
+		
 		System.out.println(l1.getClass().equals(l2.getClass()));
+		
 		
 		TestGenerics tmp = new TestGenerics();
 		System.out.println(tmp.getClass());
 		
-		System.out.println(l1.getClass()); 
-		System.out.println(l2.getClass());
-		
 		System.exit(1);
-		
 		
 		
 		//l2 = l1; // not compatible 
@@ -50,13 +53,14 @@ class TestGenerics{
 	    //p1.add("Yannis"); // invalid. The compiler understands this problem.
 		p1.add(new Portokali());
 		p1.add(new BigOrange());
+		p1.add(new Object());
 		//HashSet<Portokali> hp = new HashSet<BigOrange>();
 	}
 	
 	void testAssignments_bounds() {
 		 //Set<X extends Frouto>  t1 = new HashSet<>(); // syntaktika den exei nohma
 		
-	}
+	}/
 	void testAssignments_wildcards() {
 		
 		// normal case
@@ -68,6 +72,12 @@ class TestGenerics{
 		// "Read Only"
 		Set<? extends Frouto>   t2 = new HashSet<>();
 		//t2.add(new Frouto()); // o agnwstos typos ? tha mporouse na einai mia ypoklash tou Froutou, ara den mporw na valw apla ena fruit
+		//t2.add(null  ); // only this is valid
+		//To ? μπορεί να είναι Frouto ή οποιαδήποτε υποκλάση του Φρούτου.	    Εγώ όμως είναι αδύνατο να γνωρίζω όλες τις υποκλάσεις του Φρούτου (αφού π.χ. με ανώνυμες κλάσεις δημιουργούνται ατ runtime).runtime 	    Απογορεύω την προσθήκη του φρούτου διότι το ? μπορεί να έχει αντιστοιχηθεί σε Portokali ή οποιαδήποτε άλλη υποκλάση που δεν γνωρίζω.
+		
+		
+		
+		
 		//t2.add(new Portokali()); // gia ton idio logo den douleuei
 		//t2.add(new BigOrange()); // gia ton idio logo den douleuei
 				
@@ -159,8 +169,8 @@ class TestGenerics{
 		TestGenerics o = new TestGenerics();
 		//o.testSimpleTypes();
 		//o.testAssignments();
-		//o.testAssignments_bounds();
-		o.testAssignments_wildcards();
+		o.testAssignments_bounds();
+		//o.testAssignments_wildcards();
 		
 		/*
 		List<Portokali> lala0 = new ArrayList();

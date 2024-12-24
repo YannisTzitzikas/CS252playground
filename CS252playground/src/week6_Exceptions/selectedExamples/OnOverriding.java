@@ -16,7 +16,7 @@ class GradStudentCatalog extends StudentCatalog {
 }
 class Test {
 	public static void main(String[] args) {
-		Student s = new GradStudent();
+		StudentCatalog s = new GradStudentCatalog();
 		try { 
 			System.out.println(s.getAMOf("Yannis")); 
 		} catch(Exception e) {System.out.println(e);}

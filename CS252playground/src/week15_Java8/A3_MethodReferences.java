@@ -24,24 +24,26 @@ class TestMethodReferences {
 		
 		// Variable pointing to a constructor
 		// https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html
-		Function<String,Person>   constr = Person::new;  // f: A -> B, edw: f: String -> Person
+		Function<String,Person>   kataskeuastisProswpwn = Person::new;  // f: A -> B, edw: f: String -> Person
 			
 		// A list of Strings
-		List<String> nl =  Arrays.asList("Yannis", "Nikos", "Maria");
+		List<String> nameList =  Arrays.asList("Yannis", "Nikos", "Maria");
+		// We want to create one object for each of the above strings
+		// and that string to the constructor
 		
 		// without Java 8 features
-		for (String n: nl) 
+		for (String n: nameList) 
 			new Person(n);
 		
 		// Calling a constructor for each element in the list
 		// 1st Method
-		nl.forEach(x -> new Person(x));
+		nameList.forEach(x -> new Person(x));
 		
 		// 2nd Method
-		nl.forEach(Person::new);
+		nameList.forEach(Person::new);
 		
 		// 3rd Method  (the Function was a default method apply)
-		nl.forEach(constr::apply);
+		nameList.forEach(kataskeuastisProswpwn::apply);
 		
 		
 		//Consumer =
@@ -59,13 +61,24 @@ class TestMethodReferences {
 		
 		final int K =5;
 		ArrayList al = new ArrayList();
-		nl.forEach(x -> {  
+		nameList.forEach(x -> {  
 			Person p = new Person(x);
 			al.add(p);
 			System.out.println(K + ">>>" + al);
 			//al = new ArrayList();
 			} );
 		
+		toDelete();
+		
 	}
-	
+
+	static void toDelete() {
+		Function<String,Integer> lala = x -> {  System.out.println(2);return 2; };  // f: String -> Integer, f(x) =2 
+		List<String> tmp =  Arrays.asList("Yannis",  "Maria");
+		tmp.forEach(lala::apply);
+		
+	}
 }
+
+
+

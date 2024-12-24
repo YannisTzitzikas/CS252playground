@@ -34,6 +34,7 @@ class AudioJButton extends JButton {
 		this.obj = o;
 		this.setBackground(Color.green);
 		this.setForeground(Color.black);
+		//this.setFont();
 		this.setToolTipText("This button corresponds to an object associated with audio." +
 				 "Press to hear the sound");
 	}
@@ -100,9 +101,9 @@ class TEST {
 		SimpleGUICard s = new SimpleGUICard();
 		s.add(new String("test"));
 		s.add(new B());
+		s.add(4);
+		s.add(3.15F);
 		
 	}
 }
 
-class A {}
-class B extends A {}

@@ -2,7 +2,9 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/tzitzik/Desktop/Downloads/jsoup-1.16.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/tzitzik/Desktop/Downloads/jfugue-4.0.3.jar"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="src" path="libs"/>
+	<classpathentry kind="lib" path="C:/Users/tzitzik/Documents/YandT/Yannis/My_TEACHING/CS_252/assignments/2024-2025/a1/templates/Project_Templates_A1/Library/jfugue/jfugue-4.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/jfugue-4.0.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

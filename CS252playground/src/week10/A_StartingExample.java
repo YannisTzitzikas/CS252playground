@@ -8,7 +8,7 @@ package week10;
  *  2. Uncomment Part C
  */
 class MyThread_A extends Thread {
-	static final int NUM=100;
+	static final int NUM=10;
 	public void run() {
 	  for (int i=0; i<NUM; i++) {
 	 	 System.out.print(" A"+i);
@@ -18,12 +18,12 @@ class MyThread_A extends Thread {
 	}
 
 class MyThread_B   implements Runnable {
-	static final int NUM=100;
+	static final int NUM=10;
 	
 	public void run() {
 		for (int i=0; i<NUM; i++) {
 			System.out.print(" B" +i);
-			try { 	Thread.sleep(50);   } catch (Exception e) { }
+			try { 	Thread.sleep(2000);   } catch (Exception e) { }
 		}
 	}
 }
@@ -31,7 +31,7 @@ class MyThread_B   implements Runnable {
 class A_StartingExample {
 	public static void main(String arg[]) {
 		
-		try { 	Thread.sleep(2000);   } catch (Exception e) { }
+		//try { 	Thread.sleep(2000);   } catch (Exception e) { }
 		
 		System.out.println("\n-Καλημέρα !");
 				
@@ -58,6 +58,7 @@ class A_StartingExample {
 		 } catch (Exception e) { }
 		 */
 		 
+		 /*
 		 // Part C
 		 try {
 		    mtA.join(); // try commenting these lines

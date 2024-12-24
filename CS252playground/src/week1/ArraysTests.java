@@ -21,9 +21,17 @@ public class ArraysTests {
 		students = new int[K]; // δέσμευση χώρου
 		
 		System.out.println(students[3]);  // arxikopoihsh timwn se 0
+		
+		
+		
 		//System.out.println(students[10]);  // out of bounds
+		
+		
 		//System.out.println(students[-1]);
 		System.out.println(students); // Default behavior of toString() is to print class name, then @, then unsigned hexadecimal representation of the hash code of the object.
+		
+		
+		
 		
 		//int[] pa  = new int[3];		pa = students;		System.out.println(pa);
 		
@@ -44,11 +52,14 @@ public class ArraysTests {
 			System.out.print(days[i] + " ");
 		}
 		
+		//System.exit(1);
 		System.out.println();
 		for (String d: days) {
 			System.out.print(d + " ");
 		}
 		
+		
+		//days.length = 78;
 		System.out.println();
 		
 		
@@ -58,10 +69,10 @@ public class ArraysTests {
 		for (String m: months) {
 			System.out.println("***Month:"+ m);
 			for (String d: days)
-				System.out.printf("%4s", d);
+				System.out.printf("%5s", d);
 			System.out.println();
 			for (int i=1; i<=31; i++) {
-				System.out.printf("%4d",i);
+				System.out.printf("%5d",i);
 				//System.out.print(i +" ");
 				if (i%7==0) {
 					System.out.println();
@@ -69,6 +80,8 @@ public class ArraysTests {
 			}
 			System.out.println();
 		}
+		
+		//System.exit(1);
 		
 		// 2D, 3D, XD arrays
 	
@@ -88,9 +101,12 @@ public class ArraysTests {
 		
 		sodoku[2] = oneSolution;
 		sodoku[3] = tooSmall;
+		sodoku[3][0]=-5000;
+		sodoku[7] = tooSmall;
+		sodoku[8] = tooSmall;
 		
 		/*
-		// for loop with predetermined sizes
+			// for loop with predetermined sizes
 		for (int i=0; i<N; i++) {
 			for (int j=0; j < N; j++) {	
 				System.out.print(sodoku[i][j] + " ");
@@ -99,7 +115,7 @@ public class ArraysTests {
 		}
 		*/
 		
-		/*
+		
 		// for loop that considers the size of each row
 		System.out.println("=======================");
 		for (int i=0; i<sodoku.length; i++) {
@@ -110,8 +126,9 @@ public class ArraysTests {
 			System.out.println();
 		}
 		
+		/*
 		
-		
+		System.exit(2);
 		sodoku[6] = oneSolution;
 		sodoku[8] = tooSmall;
 		sodoku[8] = oneSolution;
@@ -124,15 +141,17 @@ public class ArraysTests {
 			}
 			System.out.println();
 		}
+		
 		*/
 		
-		
 		// 2D initialization
+		System.out.println("\n\n");
 		
-		String[] omades = { "Pao", "Ofh" };
+		String[] omades = { "ΠΑΟ", "ΟΦΗ" };
 		
 		String[][] triliza = {  
 				{"X","O","O"},
+				//{"X","O","O"},
 				{"O","X","O","1","2","3"},
 				{"X","O","O"},
 	    };
@@ -145,15 +164,20 @@ public class ArraysTests {
 		}
 		
 		
-		for (int curVal :  new int[]  {4,3,8,1} ) {
+		//int[] pinakas = {4,3,8,1};
+		//for (int curVal :  pinakas) {
+		for (int curVal: new int[] {4,3}) {
+			
 			System.out.println(curVal);
 		}
+		
+		
 		
 		List  lista = new ArrayList() ;
 		lista.add("Lala");
 		
 		
-		/*
+		
 		String[][] spy;
 		spy = triliza;
 		spy[0][0]="Bammm";
@@ -161,19 +185,20 @@ public class ArraysTests {
 		for (String[] tr: triliza ) {
 			System.out.println("This line has size " +  tr.length);
 		}
-		
+
 		
 		for (String[] tr: triliza) {
 			for (String tcell: tr) {
-				System.out.print(tcell);
+				System.out.print(tcell + " ");
 			}
 			System.out.print("\n");
 		}
 
+	  //System.exit(1);
 		
 		for (int i=0; i<triliza.length; i++) {
 			for (int j=0; j< triliza[i].length; j++) {
-				System.out.print(triliza[i][j]);
+				System.out.print(triliza[i][j]+" ");
 			}
 			System.out.print("\n");
 		}
@@ -184,13 +209,62 @@ public class ArraysTests {
 		}
 
 		Object tapantaola;
-		tapantaola = triliza;
-		tapantaola = "lala";
 		
-			
+		//tapantaola = 2;
+		tapantaola = new Integer(2); // Integer is a wrapper class for int
+		
+		//tapantaola = triliza;
+		
+		//tapantaola = "lala";
+		
+		System.out.println("====");
+		System.out.println(tapantaola);
+		
+		
+		String[] d = { "Mon", "Tue" };
+		Object[][] p = new Object[2][2];
+		p[0][0] = 44;
+		p[0][1] = "καλημέρα";
+		p[1][0] = d;
+		p[1][1] = p;
+		
+		for (int i=0; i<p.length; i++) {
+			for (int j=0; j< p[i].length; j++) {
+				System.out.print(p[i][j]+" ");
+				if (p[i][j] instanceof Integer) {
+					System.out.println("INTINT");
+				}
+				if (p[i][j] instanceof Object[]) {
+					System.out.println("OYAOY");
+				}
+				if (p[i][j] instanceof String[]) {
+					System.out.print("Βρήκα String:");
+					
+					for (int h=0; h<((String[] ) p[i][j]).length; h++) {
+						System.out.print("["+((String[] ) p[i][j])[h]+"]");
+					}
+					
+					
+					
+					System.out.print("\n");
+				}
+			}
+			System.out.print("\n");
+		}
+		
+		
+		//
+		ArrayList al = new ArrayList();
+		
+		for (int i=0; i<20; i++) {
+			al.add(i);
+		}
+		System.out.println(al);
+		
+		
 		System.out.println("\nBye bye Arrays");
 		//	System.exit(0);
-		*/
+		
 	
 	} // main
 	
